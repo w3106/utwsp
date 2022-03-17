@@ -1,0 +1,2127 @@
+<!-- PC區塊_主視覺開始 -->
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta property="og:image" content="https://img.udn.com/art/01_sp/20200706_GACHA/images/FB_1200x628.jpg"/>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="https://img.udn.com/art/01_sp/20200518_mk_SP_01/css/animate.css">	
+<link rel="stylesheet" href="https://img.udn.com/art/01_sp/20200106_mk_SP_01/css/shine.css">
+<!---<script src='https://shopping.udn.com/mall/js/new_mobile/jquery-1.11.1.min.js'></script>-->
+
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		var host_url = window.location.protocol + '//' + window.location.hostname;
+		var point_id = '28gUZuY';
+		var kdid = 'eventPage';
+		var eventPage = '2888101151';
+		actPoint(point_id);
+		
+		$(document).on('click', '#login', function () {
+			var exActs = new Array();
+			$(".actRegister_number").each(function(index){
+			
+				exActs.push($(this).attr('id').replace("_lastNumber",""));
+			});
+			$.ajax({
+				type: 'post',
+				url: '/mall/cus/event/Point.ajax',
+				data: {
+						dc_btn_0: 'Func_GetKeyData',
+						dc_poid_0: point_id,
+						$dc$_exActs_0: exActs
+					  },
+				dataType: 'json',
+				success: function(data) {
+					if(data != null){
+						if(data.isLogin == 'Y'){
+							alert('已登入');
+						}else{
+							window.location = '/mall/cus/meb/Cc1m02.do?dc_redirecturl_0=' + encodeURIComponent(window.location.href);
+													
+						}
+					}
+				},
+				error: function(xhr, ajaxOptions, thrownError) {
+				} 
+			});
+		});
+		
+		$(document).on('click', '#point', function () {
+			var exActs = new Array();
+			$(".actRegister_number").each(function(index){
+			
+				exActs.push($(this).attr('id').replace("_lastNumber",""));
+			});
+			$.ajax({
+				type: 'post',
+				url: '/mall/cus/event/Point.ajax',
+				data: {
+						dc_btn_0: 'Func_GetKeyData',
+						dc_poid_0: point_id,
+						$dc$_exActs_0: exActs
+					  },
+				dataType: 'json',
+				success: function(data) {
+					if(data != null){
+						if(data.isLogin == 'Y'){
+							window.location = '/mall/cus/meb/Cc1m33.do?dc_xuid_0=' + point_id + '&eventpage=' + eventPage + '&kdid=' + kdid;
+						}else{
+							window.location = '/mall/cus/meb/Cc1m02.do?dc_redirecturl_0=' + encodeURIComponent(window.location.href+'#Map02');
+							//window.location = '/mall/cus/meb/Cc1m02.do?dc_redirecturl_0=' + encodeURIComponent( host_url + '/mall/cus/meb/Cc1m33.do');
+						}
+					}
+				},
+				error: function(xhr, ajaxOptions, thrownError) {
+				} 
+			});
+		});
+	});
+	
+</script>
+
+
+<style>
+    :focus {
+     outline:0;
+ }
+    * {
+            /* outline: none; */
+    }
+    img { border: 0;}
+    html, body {
+        margin: 0;
+        padding: 0;
+        min-width: 0;/* 必寫!!!*/
+    }
+
+    .vspc_bg{
+        margin: 0;
+        padding: 0;
+        min-width: 0;
+        /* 必寫!!!*/
+        height: auto;
+        background-color: #ff7d69;
+        background-image: url(https://img.udn.com/art/01_sp/20200706_GACHA/images/index_bg.jpg);/* 滿版主視覺背景 */
+        background-repeat: no-repeat;
+        background-position: center top;
+        /* background-position: center 182px; */
+        /* 套HEADER時需要打開 */
+    }
+
+
+	/* =====================================================================================*/
+
+
+		/* ------顯示點數開始------ */
+
+		.vspc .main .take_one_box {
+			position: absolute;
+			width: calc(365 / 1190 * 100%);
+			/* width: 50%; */
+			top: 1486px;
+			left: 32%;
+			z-index: 70;
+			color: #fff;
+			font-size: 37px;
+			font-weight: 800;
+			/* line-height: 2rem;  */
+			text-align: center;
+			font-family: "微軟正黑體", "Microsoft JhengHei", Arial, Helvetica;
+			/* font: bold "微軟正黑體","Microsoft JhengHei", Arial, Helvetica;  */
+			text-decoration: none;
+		}
+
+
+		.vspc .main .take_one_box span {
+			/* position: absolute;
+			width: calc(550 / 1190 * 100%);
+			top: calc(64 / 1190 * 100%);
+			left: calc(64 / 1190 * 100%);
+			z-index: 70;*/
+			color: #fff;
+			font-size: 70px;
+			font-weight: 800;
+			/* line-height: 2rem; */
+			/* text-align: center; */
+			font-family: "微軟正黑體", "Microsoft JhengHei", Arial, Helvetica;
+			letter-spacing: 0px;
+			text-decoration: none;
+		}
+
+		/* ------顯示點數結束------ */
+
+
+
+	@media screen and (max-width: 640px) {
+
+		/* ------顯示點數手機版開始------ */
+
+		.vspc .main .take_one_box {
+			position: absolute;
+			width: calc(320 / 640 * 100%);
+			/* width: 66.7%; */
+			top: calc(275% + 45.6vw);
+			left: 20%;
+			z-index: 70;
+			color: #fff;
+			font-size: 5vw;
+			font-weight: 800;
+			/* line-height: 2rem;  */
+			/* text-align: center; */
+			font-family: "微軟正黑體", "Microsoft JhengHei", Arial, Helvetica;
+			/* font: bold "微軟正黑體","Microsoft JhengHei", Arial, Helvetica;  */
+			text-decoration: none;
+		}
+
+
+		.vspc .main .take_one_box span {
+			/* position: absolute;
+			width: calc(550 / 1190 * 100%);
+			top: calc(64 / 1190 * 100%);
+			left: calc(64 / 1190 * 100%);
+			z-index: 70;*/
+			color: #fff;
+			font-size: 9.5vw;
+			font-weight: 800;
+			/* line-height: 2rem; */
+			/* text-align: center; */
+			font-family: "微軟正黑體", "Microsoft JhengHei", Arial, Helvetica;
+			letter-spacing: -2px;
+			text-decoration: none;
+		}
+
+		/* ------顯示點數手機版結束------ */
+
+
+
+	}
+
+
+	/* =====================================================================================*/
+
+
+/* ------彈跳視窗開始------ */
+
+.lightbox-target {
+    position: fixed;
+    top: -100%;
+    width: 100%;
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    overflow: hidden;
+    z-index: 999;
+}
+
+
+.content_w h3 {
+    margin: 0;
+    padding: 0;
+    /* height:3rem;  */
+    width: 100%;
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 3rem;
+    text-align: center;
+    color: #fff;
+    background-color: #ff7f00;
+    font: bold 28px/56px "微軟正黑體", "Microsoft JhengHei", Arial, Helvetica;
+    text-decoration: none;
+}
+
+
+.content_w h3 span.lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 6px;
+    display: block;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    width: 63px;
+    height: 33px;
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: center;
+    /* text-decoration:none; */
+}
+
+.content_w h3 span.close a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #333;
+    /* text-decoration:none; */
+}
+
+
+.lightbox-target .content_w {
+    width: 60%;
+    height: 60%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #ff7f00;
+    /*overflow-y:auto; 
+    color: #333;*/
+
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 0%;
+    max-width: 0%;
+    /* border: 3px solid #fff; */
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    -moz-transition: ease-in-out 0.5s;
+    -o-transition: ease-in-out 0.5s;
+    -webkit-transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.5s;
+    z-index: 999;
+}
+
+.lightbox-target .content_w .wold01 {
+    width: 100%;
+    height: 88%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #fff;
+    /* color: #333; */
+    margin: auto;
+    /* padding: 0 10px 0 10px; */
+    position: absolute;
+    /* top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    max-height: 0%;
+    max-width: 0%;*/
+    /* border: 3px solid #fff; */
+    /* font: bold 14px/48px "微軟正黑體","Microsoft JhengHei", Arial, Helvetica; 
+    text-decoration: none; */
+}
+
+.lightbox-target .content_w .wold01 ol {
+    width: 90%;
+    color: #333;
+    margin: auto;
+    position: relative;
+    text-align: left;
+    font: bold 16px/36px "微軟正黑體", "Microsoft JhengHei", Arial, Helvetica;
+    text-decoration: none;
+}
+
+.lightbox-target .content_w .wold01 p {
+    width: 90%;
+    color: #333;
+    /* top: 5%; */
+    left: -2%;
+    margin: auto;
+    position: relative;
+    text-align: left;
+    font: bold 20px/36px "微軟正黑體", "Microsoft JhengHei", Arial, Helvetica;
+    text-decoration: none;
+}
+
+.lightbox-target .content_w .wold01 a {
+    color: #e45d2d;
+    text-decoration: none;
+}
+
+.lightbox-target img {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 0%;
+    max-width: 0%;
+    border: 3px solid #fff;
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    -moz-transition: ease-in-out 0.5s;
+    -o-transition: ease-in-out 0.5s;
+    -webkit-transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.5s;
+}
+
+.lightbox-target:target {
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+}
+
+.lightbox-target:target .content_w,
+.lightbox-target:target img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+
+/* .lightbox-target img {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-height: 0%;
+        max-width: 0%;			
+        -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        box-sizing: border-box;
+        -moz-transition: ease-in-out 0.5s;
+        -o-transition: ease-in-out 0.5s;
+        -webkit-transition: ease-in-out 0.5s;
+        transition: ease-in-out 0.5s;
+    } */
+
+
+
+/* ========表格======= */
+
+.lightbox-target .content_w .tb_outer {
+    display: block;
+    overflow: hidden;
+    width: 80%;
+    font-size: 16px;
+    line-height: 30px;
+    border: 2px solid #878787;
+    margin-top: 12px;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    margin: auto;
+}
+
+.lightbox-target .content_w .tb_outer tr {
+    border-bottom: 1px solid #878787;
+}
+
+.lightbox-target .content_w .tb_outer th {
+    width: 150px;
+    background-color: #72726b;
+    color: #fff;
+    border-right: 1px solid #878787;
+}
+
+.lightbox-target .content_w .tb_outer td {
+    border-right: 1px solid #878787;
+    border-bottom: 1px solid #878787;
+    text-align: center;
+}
+
+.lightbox-target .content_w .tb_outer .last_col {
+    border-right: none;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 640px) {
+
+    /* ------彈跳視窗手機版開始------ */
+
+    .lightbox-target {
+        position: fixed;
+        top: -100%;
+        width: 100%;
+        max-width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        -moz-transition: opacity 0.5s ease-in-out;
+        -o-transition: opacity 0.5s ease-in-out;
+        -webkit-transition: opacity 0.5s ease-in-out;
+        transition: opacity 0.5s ease-in-out;
+        overflow: hidden;
+        z-index: 999;
+    }
+
+
+    .content_w h3 {
+        margin: 0;
+        padding: 0;
+        /* height:3rem;  */
+        width: 100%;
+        font-size: 1.25rem;
+        font-weight: 800;
+        line-height: 3rem;
+        text-align: center;
+        color: #fff;
+        background-color: #ff7f00;
+        font: bold 28px/56px "微軟正黑體", "Microsoft JhengHei", Arial, Helvetica;
+        text-decoration: none;
+    }
+
+
+    .content_w h3 span.lightbox-close {
+        position: absolute;
+        top: 10px;
+        right: 6px;
+        display: block;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        width: 63px;
+        height: 33px;
+        font-size: 1rem;
+        line-height: 2rem;
+        text-align: center;
+        /* text-decoration:none; */
+    }
+
+    .content_w h3 span.close a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        color: #333;
+        /* text-decoration:none; */
+    }
+
+
+    .lightbox-target .content_w {
+        width: 90%;
+        height: 60%;
+        border-radius: 10px;
+        overflow: hidden;
+        /*overflow-y:auto; 
+        background: #fff;
+        color: #333;*/
+
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-height: 0%;
+        max-width: 0%;
+        /* border: 3px solid #fff; */
+        -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        box-sizing: border-box;
+        -moz-transition: ease-in-out 0.5s;
+        -o-transition: ease-in-out 0.5s;
+        -webkit-transition: ease-in-out 0.5s;
+        transition: ease-in-out 0.5s;
+        z-index: 999;
+    }
+
+    .lightbox-target .content_w .wold01 {
+        width: 100%;
+        height: 84%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background: #fff;
+        /* color: #333; */
+        margin: auto;
+        padding: 0 20px 0 20px;
+        position: absolute;
+        /* top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; 
+        max-height: 0%;
+        max-width: 0%;*/
+        /* border: 3px solid #fff; */
+        /* font: bold 14px/48px "微軟正黑體","Microsoft JhengHei", Arial, Helvetica; 
+        text-decoration: none; */
+    }
+
+    .lightbox-target .content_w .wold01 ol {
+        width: 88%;
+        left: -2%;
+        color: #333;
+        margin: auto;
+        position: relative;
+        text-align: left;
+        font: bold 16px/36px "微軟正黑體", "Microsoft JhengHei", Arial, Helvetica;
+        text-decoration: none;
+    }
+
+    .lightbox-target .content_w .wold01 p {
+        width: 90%;
+        color: #333;
+        /* top: 5%; */
+        left: -2%;
+        margin: auto;
+        position: relative;
+        text-align: left;
+        font: bold 20px/36px "微軟正黑體", "Microsoft JhengHei", Arial, Helvetica;
+        text-decoration: none;
+    }
+
+    .lightbox-target .content_w .wold01 a {
+        color: #e45d2d;
+        text-decoration: none;
+    }
+
+
+
+    .lightbox-target img {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-height: 0%;
+        max-width: 0%;
+        border: 3px solid #fff;
+        -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        box-sizing: border-box;
+        -moz-transition: ease-in-out 0.5s;
+        -o-transition: ease-in-out 0.5s;
+        -webkit-transition: ease-in-out 0.5s;
+        transition: ease-in-out 0.5s;
+    }
+
+    .lightbox-target:target {
+        opacity: 1;
+        top: 0;
+        bottom: 0;
+    }
+
+    .lightbox-target:target .content_w,
+    .lightbox-target:target img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    /* .lightbox-target img {
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            max-height: 0%;
+            max-width: 0%;			
+            -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+            -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+            box-sizing: border-box;
+            -moz-transition: ease-in-out 0.5s;
+            -o-transition: ease-in-out 0.5s;
+            -webkit-transition: ease-in-out 0.5s;
+            transition: ease-in-out 0.5s;
+        } */
+
+
+
+    /* ========表格======= */
+    .lightbox-target .content_w .tb_outer {
+        display: block;
+        overflow: hidden;
+        width: 98%;
+        font-size: 16px;
+        line-height: 26px;
+        border: 2px solid #878787;
+        margin-top: 12px;
+        text-align: center;
+        letter-spacing: 1px;
+        box-sizing: border-box;
+        margin-bottom: 12px;
+
+
+    }
+
+
+
+
+
+
+
+
+    /* ------彈跳視窗手機版結束------ */
+
+
+
+
+}
+
+
+
+/* ------彈跳視窗結束------ */
+
+
+
+
+
+/*-------------------------*/
+/* 視差背景_樣式
+---------------------------*/
+
+.rellax_bg {
+max-width: 1920px;
+position: fixed;
+top:300px;
+left: calc(50% - 950px);
+z-index: 1;
+}
+
+/*-------------------------*/
+/* pc區塊_樣式
+---------------------------*/
+
+.vspc {
+width: 100%;
+height: auto;	
+position: relative;
+overflow: hidden;
+    }
+
+.vspc * {
+margin: 0;
+padding: 0;
+-webkit-text-size-adjust: none;
+list-style: none;
+background-position: center top;
+background-size: 100% auto;
+background-repeat: no-repeat;
+position: relative;
+box-sizing: border-box;
+}
+
+.vspc img { 
+max-width: 100%;
+height: auto;
+display: block;
+position: relative;
+    }
+
+/*-------------------------*/
+/* pc區塊_main_樣式 
+---------------------------*/
+
+.vspc .main{
+width: 1190px;
+height: auto;
+min-height: 450px; /* 必填  請填入main高度 */	
+margin:0 auto;
+/* background-color: #4fe10b; */
+position: relative;
+background-image: url(https://img.udn.com/art/01_sp/20200706_GACHA/images/index_01.gif);
+        
+}
+
+/*-------------------------*/
+/* 視覺左上角活動LOGO_樣式
+---------------------------*/
+.udnLOGO {
+display: block;
+z-index: 700;
+position: absolute;
+width: calc(139/1190*100%);
+/* 更改數值 調整logo大小 */
+left: calc(40/1190*100%);
+top: 20px;
+}
+
+.udnLOGO span {
+display: block;
+width: 100%;
+height: 0;
+background-size: 100% auto;
+padding-bottom: calc(293/797*100%);
+/* 更改數值 調整logo整體高度*/
+
+/* padding-bottom: calc(360/797*100%); */
+/* 用第4/5 底色_logo 打開開素質 */
+
+/* 更換需要的logo路徑 2018舊版 or 2019-新版  */
+background-image: url(https://img.udn.com/art/2019_logo/images/new_udnlogo_01.svg);
+}
+
+/* 背景動態_樣式
+---------------------------*/
+
+
+.vspc .main .mob_title,.vspc .main .mob_title2,.vspc .main .mob_title3,.vspc .main .mob_try{
+display: none;
+}
+
+
+.animated {
+-webkit-animation-duration: 1s;
+animation-duration: 1s;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both;
+}
+
+
+
+.vspc .main .Member{
+display: block;
+width: 120px;
+height: 38px;			
+position: absolute;
+top:1505px;
+left: 753px;
+z-index:5;
+}
+@media screen and (max-width: 640px) {
+    .vspc .main .Member{
+        display: block;
+        width: calc(120 / 640 * 86%);
+        height: auto;
+        position: absolute;
+        top: calc(275% + 48.2vw);
+        left: 70.8%;
+        z-index:5;
+    }
+
+}
+
+
+
+.vspc .main .money{
+display: block;
+width: 1247px;
+height: 316px;			
+position: absolute;
+top:189px;
+left:36px;
+z-index:10;
+}
+
+
+.vspc .main .switch{
+display: block;
+width: 380px;
+height: 225px;			
+position: absolute;
+top:208px;
+left: 682px;
+animation: zoomIn .3s both;
+animation-delay: .1s;
+}
+
+
+
+.heartbeat {-webkit-animation-duration: 1s;  animation-duration: 1s;  -webkit-animation-name: heartbeat;  animation-name: heartbeat;  -webkit-animation-iteration-count: infinite;    animation-iteration-count:infinite;/* -webkit-animation-direction: alternate;animation-direction: alternate;*/}
+@-webkit-keyframes heartbeat {   
+    0%   { -webkit-transform: scale(1); transform: scale(1); filter:brightness(110%);} 
+    40%  { -webkit-transform: scale(0.95); transform: scale(0.95); filter:brightness(100%);} 
+    60%  { -webkit-transform: scale(1); transform: scale(1); filter:brightness(110%);} 
+    80%  { -webkit-transform: scale(0.95); transform: scale(0.95); filter:brightness(100%);}
+    100% { -webkit-transform: scale(1); transform: scale(1); filter:brightness(110%);} 
+    }
+@keyframes heartbeat { 
+    0%   { -webkit-transform: scale(1); transform: scale(1); filter:brightness(110%);} 
+    40%  { -webkit-transform: scale(0.95); transform: scale(0.95); filter:brightness(100%);} 
+    60%  { -webkit-transform: scale(1); transform: scale(1); filter:brightness(110%);} 
+    80%  { -webkit-transform: scale(0.95); transform: scale(0.95); filter:brightness(100%);}
+    100% { -webkit-transform: scale(1); transform: scale(1); filter:brightness(110%);} 
+}
+
+
+
+
+.vspc .main .PU{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    width: 1190px;			
+    top:658px;
+    left: 0px;	
+    
+}	
+
+.vspc .main .pu01,.vspc .main .pu02,.vspc .main .pu03,.vspc .main .pu04,.vspc .main .pu05,.vspc .main .pu06,.vspc .main .pu07,.vspc .main .pu08
+
+{
+    padding: 0 7px 12px 8px;
+}
+
+.vspc .main .PU a{
+    transition: all .5s;
+}
+
+.vspc .main .PU a:hover{
+    transform: scale(.98);
+}
+
+
+
+
+
+.vspc .pc {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;	
+    width: 100%;
+    width: 1190px;		
+    height: 3370px;
+    margin: 0 auto;
+    background-image: url(https://img.udn.com/art/01_sp/20200706_GACHA/images/index_02.jpg);
+    
+    
+}
+
+.vspc .pc a{
+    transition: all .5s;
+    z-index: 100;
+}
+
+.vspc .pc a:hover{
+    transform: scale(0.98);
+    z-index: 100;
+}
+
+
+.vspc .pc .pro{
+    padding: 0 10px 10px 0;
+}
+
+
+.vspc .mob{
+    display: none;
+}
+
+
+
+
+
+.box_click{
+    display: flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+    z-index:3; 
+    position:absolute;	
+    justify-content: center;
+    width: 1190px;
+}	
+
+.box_click a{
+	padding: 0px 45px 0px 45px;
+    transition: all .5s;
+}
+
+.box_click a:hover{
+    transform: scale(.98);
+}
+
+
+
+
+/*按鈕樣式*/
+.box_more { z-index:3; position:absolute; 
+      -webkit-transition: all 0.2s ease;
+         -moz-transition: all 0.2s ease;
+          -ms-transition: all 0.2s ease;
+           -o-transition: all 0.2s ease;
+              transition: all 0.2s ease;}
+.box_more a { text-decoration:none; width:100%;}
+.box_more:hover { filter: brightness(110%); 
+-webkit-transform:translateY(5px);
+ -moz-transform:translateY(5px);
+  -ms-transform:translateY(5px);
+   -o-transform:translateY(5px);
+      transform:translateY(5px);}
+
+
+
+
+
+
+.box_btn{
+    display: flex;
+    z-index:3; 
+    position:absolute;		
+}	
+
+.box_btn a{
+    transition: all .5s;
+}
+
+.box_btn a:hover{
+    transform: scale(.98);
+}
+
+
+
+
+
+.vspc .pc .try{
+	display: block;
+	width: 688px;
+	height: 71px;			
+	position: absolute;
+
+	}
+
+
+
+    
+/*扭蛋*/
+.ball_box_A {
+	z-index: 2;
+	width: 390px;
+	height: 372px;
+	position: absolute;
+	top:401px;
+	left:138px;
+}
+  .ball_box_A span {
+    z-index: 1;
+    position: absolute;
+    width: 176px; }
+  .ball_box_A .ball_1 {
+    top: 27%;
+    left: -1%;
+    z-index: 0; }
+  .ball_box_A .ball_2 {
+    top: 47%;
+    left: 14%;
+    z-index: 0; }
+  .ball_box_A .ball_3 {
+    top: 63%;
+    left: 45%;
+    z-index: 0; }
+  .ball_box_A .ball_4 {
+    top: 57%;
+    left: -8%;
+    z-index: 0; }
+  .ball_box_A .ball_5 {
+    top: 65%;
+    left: 21%;
+	z-index: 0; }
+  .ball_box_A .ball_6 {
+    top: 50%;
+    left: 64%;
+	z-index: 0; }
+  .ball_box_A .ball_7 {
+    top: 34%;
+    left: 33%;
+    z-index: 1; }
+
+
+.ball_box_B {
+	z-index: 2;
+	width: 390px;
+	height: 372px;
+	position: absolute;
+	top:401px;
+	left:662px;
+}
+  .ball_box_B span {
+    z-index: 1;
+    position: absolute;
+    width: 186px; }
+  .ball_box_B .ball_1 {
+    top: 61%;
+    left: 42%;
+    z-index: 0; }
+  .ball_box_B .ball_2 {
+    top: 45%;
+    left: -2%;
+    z-index: 0; }
+  .ball_box_B .ball_3 {
+    top: 72%;
+    left: 26%;
+    z-index: 0; }
+  .ball_box_B .ball_4 {
+    top: 73%;
+    left: 9%;
+    z-index: 0; }
+  .ball_box_B .ball_5 {
+    top: 58%;
+    left: -11%;
+	z-index: 0; }
+  .ball_box_B .ball_6 {
+    top: 44%;
+    left: 17%;
+	z-index: 0; }
+  .ball_box_B .ball_7 {
+    top: 58%;
+    left: 61%;
+    z-index: 0; }
+  .ball_box_B .ball_8 {
+    top: 21%;
+    left: 49%;
+    z-index: 1; }
+
+
+
+
+
+
+
+.vspc .tag_title{
+    width: 1190px;
+    height: auto;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif,'微軟正黑體';
+    color: #44bcd7;
+    text-align: left;
+}
+
+.vspc .foot_tag{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1190px;
+    height: auto;
+    margin: 0 auto;	
+        
+}
+
+
+
+.vspc .foot_tag a{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif,'微軟正黑體';
+    font-weight: 800;		
+    text-align: center;
+    text-decoration: none;
+    color: #44bcd7;
+    width:100px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #44bcd7;
+    border-radius: 100px;	
+    padding: 5px;
+    margin: 10px 10px 20px 10px;
+}
+
+.vspc .foot_tag a:hover{
+    background-color: #44bcd7;
+    color: #ffffff;
+}
+
+/* ------GO TOP------ */
+.fa-angle-up { background-image:url(https://img.udn.com/art/20190531_mk_SP_02/images/icon-fa-angle-up.png);}
+.vspc .goTop { position:fixed; right:10px; bottom:10px; width:50px; padding:10px; border-radius:50%; overflow:hidden; background-color:#007355; cursor: pointer;}
+.vspc .goTop span { display:block; width:30px; text-align:center;}
+.vspc .goTop span i { display:block; padding-bottom:30px;}
+.vspc .goTop:hover { filter: brightness(120%);}
+
+
+
+
+
+
+
+
+/* =============================================================================================================
+..................................................mobile_區塊....................................................
+==============================================================================================================*/	
+    
+    @media screen and (max-width: 640px) {
+        
+/*-------------------------*/
+/* 基礎設定_樣式
+---------------------------*/
+
+    html,
+    body {
+        min-width: 0px;/* 必寫!!!*/
+        
+    }
+
+    .vspc_bg{
+        max-width: 640px;
+        min-width: 0px;
+        /* 必寫!!!*/
+        background:#ff7d69;
+        background-image: none;
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+
+/*-------------------------*/
+/* mobile區塊_樣式
+---------------------------*/
+
+    .vspc .main,
+    .vspc .mob{
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 0px;
+    }
+
+
+
+/* 視覺左上角活動LOGO_樣式
+---------------------------*/
+
+
+    .udnLOGO {
+        width: calc(140/640*100%);
+        left: 4%;
+        top:1%;
+    }
+
+    .udnLOGO span{
+
+    }
+
+/* 背景動態_樣式
+---------------------------*/
+
+    .vspc .main .mob_title,
+    .vspc .main .mob_title2,
+    .vspc .main .mob_title3
+    {
+        display: block;
+    }
+
+
+    
+
+    .vspc .main .mob_try{
+        display: block;
+        width: calc(165 / 640 * 100%);
+        height: auto;
+        position: absolute;
+        top: calc(275% + 119.5vw);
+        left: 49.7%;
+        z-index:5;
+        pointer-events: none;
+    }
+
+
+/*-------------------------*/
+/* pc + mob 商品區塊_樣式
+---------------------------*/
+    .vspc .mob {
+            display: block;
+            width: 100%;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+    .mob640{
+        display: flex;
+        width: 100%;
+        max-width: 640px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .vspc .m_Pro{
+        margin: 0 auto;
+        width: 96%;
+        height: auto;
+        position: relative;
+    }
+
+    .vspc .m_Pro2{
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .vspc .foot_tag,.vspc .tag_title{
+        width: 100%;
+        max-width: 640px;
+        
+    }
+
+    .vspc .foot_tag a{			
+        margin: 0 auto;
+        margin-bottom: 15px;
+        font-size: 18px;
+    
+    }
+
+    .vspc .tag_title{
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
+
+    /* ------GO TOP------ */
+    .vspc .goTop { right:2vw; bottom:2vw; width:10vw; padding:2vw;}
+    .vspc .goTop span { width:6vw;}
+    .vspc .goTop span i { padding-bottom:6vw;}
+
+
+
+/*-------------------------*/
+/* mobile區塊_消失樣式
+---------------------------*/
+
+    .vspc .pc,
+    .vspc .main .money,
+    .vspc .main .title,
+    .vspc .main .title2,
+    .vspc .main .PU
+     {
+        display: none;
+    }	
+    
+
+    
+            
+    
+
+
+
+
+    }
+
+
+</style>
+
+
+
+
+
+
+
+<script src="https://img.udn.com/art/js_temp/jquery.2.2.4.min.js?v005"></script>
+<!-- JQ主程式 -->
+<script src="https://img.udn.com/art/js_temp/eplogo.js"></script>
+<script language="javascript" type="text/javascript" src="https://img.udn.com/art/2019SP_guide/js/MyJs.js"></script>
+<script src="https://img.udn.com/image/edm/point/actPoint.js"></script>
+
+<script language="javascript" type="text/javascript" src="https://img.udn.com/art/20181001_mk_SP_04/js/jquery.flexslider.js"></script>
+<script type="text/javascript" charset="utf-8">
+$(window).load(function() {
+$('.flexslider').flexslider({
+animation: 'slide',
+slideshowSpeed: 4000, 
+animationSpeed: 800, 
+touch: true 
+})
+})
+</script>
+
+
+<!-- imageMap RWD開始 -->
+<script src="https://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js?v005"></script>
+<script>
+$(function () {
+    $('img[usemap]').rwdImageMaps();
+});
+</script>
+<!-- imageMap RWD結束 -->
+
+
+<!-- 星星特效 js&css -->
+<script  src="https://img.udn.com/art/01_sp/20200706_GACHA/js/index.js"></script>
+<link rel="stylesheet" href="https://img.udn.com/art/01_sp/20200706_GACHA/css/style.css">
+<!-- 星星特效 js&css -->
+
+
+
+<!-- 扭蛋動畫 -->
+<link href="https://img.udn.com/art/01_sp/20200706_GACHA/css/Layout.css" rel="stylesheet" type="text/css">  
+
+
+
+
+<script src="https://img.udn.com/art/js_temp/wow.min.js?v005"></script>
+<script>
+new WOW().init();
+</script>
+
+
+
+
+
+<!-- 滾動語法錨點 -->
+<a id="PageTop" name="PageTop"></a>
+
+<div class="vspc_bg">
+
+
+<!--↓浮層區-活動詳情 開始↓--> 
+    <div class="lightbox-target" id="notice">
+        <div class="content_w">
+            <h3>活動詳情<span class="lightbox-close"><a href="#q01-top">X 關閉</a></span></h3>
+            <div class="wold01">
+
+                <p>活動期間:</p>
+                <ol style="list-style-type: none; ">
+                    <li>2020/07/06-20202/08/02</li>
+                </ol>
+
+                <br>
+
+                <p>活動規則:</p>
+                <ol style="list-style-type: none; ">
+                    <li>活動期間透過完成指定任務或消費累積點數，憑點數及可參加扭蛋機遊戲。憑1點可轉一次「驚喜扭蛋機」，憑5點可轉一次「豪華扭蛋機」，轉扭蛋機就有機會獲得<span style="color:#F00">Switch主機</span>、<span style="color:#F00">Garmin智慧心率手環</span>、
+<span style="color:#F00">禮券$1,000</span>元等大獎，總價值破萬元好禮，讓您免費扭回家！</li>
+                </ol>
+
+                <br>
+
+                <p>任務說明:</p>
+                <ol style="list-style-type: decimal; ">
+                    <li> 天天登入得1點</li>
+                    <li> 單筆消費每滿100元，可得2點(出貨日1天後給點)</li>
+                    <li> <a href="https://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=2999123128PwviOmO39Z" target="_blank">會員登入APP</a>可得10點(活動期間限領一次)</li>
+                    <li> 以手機號碼完成<a href="https://shopping.udn.com/mall/cus/meb/Cc1m01.do" target="_blank">新會員註冊</a>可得10點</li>
+                    
+                </ol>
+
+                <br>
+                
+                <p>「驚喜扭蛋機」獎項:</p>
+                <ol style="list-style-type: disc; ">
+                    <li> GARMIN vivosmart 3智慧健身心率手環 (共1名)</li>
+                    <li> udn買東西禮券$100元 (共20名)</li>
+                    <li> 立領10購物金</li>
+                    <li> 立領50全站折價券</li>
+                    
+                </ol>
+
+                <br>
+                
+                <p>「豪華扭蛋機」獎項 (每日限玩5次):</p>
+                <ol style="list-style-type: disc; ">
+                    <li> 任天堂 Nintendo Switch新款主機 (共1名)</li>
+                    <li> udn買東西禮券$1,000元 (共12名)</li>
+                    <li> 立領30購物金</li>
+                    <li> 立領150全站折價券</li>
+                    
+                </ol>
+
+                <br>
+
+                <p>注意事項:</p>
+                <ol style="list-style-type: decimal; ">
+                    <li> 獎項之禮券視同現金，1元禮券等於1元現金。詳細禮券使用規則請參照本網站之「禮券使用辦法」。符合本活動獎項之中獎名單將於<span style="background-color:#FF0;">2020/9/11</span>公告於udn買東西官方網站 （udn買東西購物中心首頁 >會員中心/帳戶>我的通知(會員中心下方)>活動公告）中，符合資格之中獎者將於<span style="background-color:#FF0;">2020/10/5</span>後陸續出貨，請依流程完成兌獎手續，會員需於會員中心之<a href="https://shopping.udn.com/mall/cus/meb/Cc1m06.do" target="_blank">「維護會員資料」</a>，填上完整的真實姓名、電話(通過<a href="https://cas.udn.com/cas/meb/Ca1a01.do" target="_blank">手機認證</a>)、地址，方可符合活動資格。</li>
+                    <li> 本活動中獎者將由udn買東西客服中心與之聯繫，需在收到中獎通知書指定時間內將中獎人資料寄回活動小組，並依規定完成兌獎流程後方可寄出獎項，若於期限內無法取得或資料不全者，視同放棄得獎權利，逾期兌獎恕不補發贈品。</li>
+                    <li> 得獎者須為訂購之會員本人，如得獎者提供之身分證影本與訂購會員姓名不符，udn買東西購物中心有權利取消得獎資格。</li>
+                    <li> 獎項以實物為主，活動獎項僅提供居住在中華民國台、澎、金、馬地區之居民。得獎獎項恕不得折抵現金，中獎通知函僅郵寄至台、澎、金、馬地區，若因得獎者地址填寫錯誤造成退件，將不再補發。依中華民國稅法規定，獎項金額若超過 NT$20,010(含)以上者，依稅捐相關法令規定，須繳交機會中獎所得稅10%。獎項金額超過 NT$1,000(含)以上者，依稅捐相關法令規定，需列入年度所得，故得獎者需提供身分證件影本並填寫領獎資料表後，方得以領取獎項，udn買東西購物中心將依法申報並由稅捐機關列入得獎者年度所得。</li>
+                    <li> 活動獎項之折價券將於中獎當日直接發放至個人帳戶。本活動之折價券使用門檻與使用效期如下，每筆消費訂單最高可使用一張折價券，詳細折價券使用規則請參照本網站之<a href="https://shopping.udn.com/mall/cus/meb/MemberInclude.do?page=memCenter/profit_01.html" target="_blank">「折價券使用辦法」</a>。</li>
+
+                	<br>
+
+                    <!-- 表格 -->
+                    <div class="tb_outer">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <th>折價券面額</th>
+                                <th>使用門檻</th>
+                                <th class="last_col">使用效期</th>
+                            </tr>
+                            <tr>
+                                <td>50</td>
+                                <td>450</td>
+                                <td class="last_col">領取當日</td>
+                            </tr>
+                            <tr>
+                                <td>150</td>
+                                <td>799</td>
+                                <td class="last_col">3日</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                	<br>
+                    
+                    <li> 購物金將於中獎當日直接發放至個人帳戶，使用效期如下，逾期失效。購金可折抵消費金額，折抵上限為單筆消費金額之20%，詳細購物金使用規則請參照本網站之<a href="https://shopping.udn.com/mall/cus/meb/MemberInclude.do?page=memCenter/shopcash.html" target="_blank">「購物金使用辦法」</a>。</li>
+                    
+                	<br>
+                    
+                    <!-- 表格 -->
+                    <div class="tb_outer">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <th>購物金</th>
+                                <th class="last_col">使用效期</th>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td class="last_col">領取當日</td>
+                            </tr>
+                            <tr>
+                                <td>30</td>
+                                <td class="last_col">3日</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <br>
+                    
+                    <li> 每筆消費之訂單，各優惠方案(購物金/折價券/現折/通關密語)只能擇一折抵，恕不合併使用。</li>
+                    <li> 本活動點數亦可使用於集點加價購活動<a href="https://shopping.udn.com/mall/cus/event/eventPage.do?header=false&UrlRefXuid=2888101151nLmvULYRTc" target="_blank">集點兌換趣</a>，點數不得移轉或贈與他人帳號使用，點數累積起始期間為即日起至2020/12/31止；點數加價購的有效期限為2021/01/31，點數於2021/01/31到期後將自動失效，集點加價購活動請至<a href="https://shopping.udn.com/mall/cus/event/eventPage.do?header=false&UrlRefXuid=2888101151nLmvULYRTc" target="_blank">集點兌換趣</a>活動專區。</li>
+                    <li> 扣點換購詳細活動辦法請參考「集點匣」，所有商品皆以實物為主，圖片僅供參考。</li>
+                    <li> 點數回饋方式依各項集點活動頁面說明為主，訂單類回饋之點數，如申請退貨則將扣除原贈與之點數，如遇系統或資料更新，以實際作業為準。</li>
+                    <li> 集點活動贈送之點數，應於有效期限內兌換，不得與其他活動合併使用，逾期作廢，亦不得兌換現金。</li>
+                    <li> 參加者保證所有填寫或提出之資料均為真實且正確，且未冒用或盜用任何第三人之資料。如有不實或不正確之情事，將被取消相關權利。</li>
+                    <li> 如有任何因電腦、網路、電話、技術或不可歸責於udn買東西購物中心之事由，而使參加者所送出或登錄之資料有遲延、遺失、錯誤、無法辨識或毀損之情況，udn買東西購物中心不負任何法律責任，參加者亦不得因此異議。</li>
+                    <li> 實際付款金額=訂購金額-購物金折抵/折價券折抵/活動現折及其它折扣。</li>
+                    <li> 符合認列資格之訂單，如另行取消、退貨、非商品瑕疵之換貨，則該筆訂單不得要求入列計算。</li>
+                    <li> 本活動獎項商品不得折換現金，若遇缺貨，將延後出貨或以等值商品替代，不得替換現金或其他商品。</li>
+                    <li> 本活動由udn買東西購物中心舉辦，參加者於參與本活動之同時，即同意接受本活動注意事項之規範，如有違反本活動注意事項之行為，udn買東西購物中心有權取消相關資格，並對於任何破壞本活動之行為保留相關權利，若有未盡事宜，以udn買東西購物中心網站公告為準。</li>
+                    <li> udn買東西購物中心保有最終解釋、調整與修改本活動辦法之權利，活動詳情及其他未盡事宜將於udn買東西購物中心網站公告，不另行通知。活動相關問題請聯繫<a href="https://shopping.udn.com/mall/cus/inf/ShoppingGuide.do" target="_blank">客服中心</a>。</li>
+                    
+                </ol>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+
+
+
+            </div>
+        </div>
+        <!-- <a class="lightbox-close" href="#"></a> -->
+    </div>
+<!--↑浮層區-活動詳情 結束↑-----------------------------------------------------------------> 
+
+
+
+<!-- 主視覺開始 -------------------------------------------------->
+<div class="vspc">		
+
+    <!-- 星星特效 -->
+    <div id="starshine">
+    	<div class="template shine"></div>
+    </div>
+    <!-- 星星特效 -->
+
+
+    <!-- 版頭區塊_main_start -->
+    <div class="main">									
+        
+        <!-- <div class="title animated"><img src="images/Title.png" /></div> -->
+        <div class="money"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/money.png" /></div>
+        <div class="switch animated"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/switch.png" /></div>
+        <div class="mob_title"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/mobile_01.jpg" /></div>
+        <div class="mob_try animated"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/try_m.png" class="uptodown" /></div>
+
+
+        <!-- 點數區 --> 
+        <div class="take_one_box">
+            <h5>您共有<span id="actPoint_total">00000</span>點</h5>
+        </div>
+        
+        <div class="Member">	
+            <a id="point" style=" cursor: pointer;"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/member_btn.png" /></a>
+        </div>
+        
+        <!-- LOGO --> 
+        <a href="https://shopping.udn.com/mall/Cc1a00.do" target="_blank" class="udnLOGO"><span></span></a> 
+        
+
+    </div>
+    <!-- 版頭區塊_main_end -->
+
+    <!-- pc 主視覺_start -->
+    <div class="pc">
+
+
+        <!-- 遊戲規則 -->
+        <div class="Area01">
+        	<img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/Area01_bg.jpg" />
+
+
+            <div class="box_click" style="top:557px;">	
+                <a class="btn01" id="login" style=" cursor: pointer;"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/Area01_btn01.png" /></a>
+                <a class="btn02" href="https://shopping.udn.com/mall/cus/meb/Cc1m01.do" target="_blank" ><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/Area01_btn02.png" /></a>
+                <a class="btn03" href="https://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=2999123128PwviOmO39Z" target="_blank" ><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/Area01_btn03.png" /></a>
+                <a class="btn04" href="#notice" ><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/Area01_btn04.png" /></a>
+            </div>
+                
+            <div class="box_more" style="top:662px; left:475px;">	
+                <a class="more" href="#notice" ><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/Area01_btn.png" /></a>
+            </div>
+                    
+        
+        
+        </div>
+        <!-- 遊戲規則END -->
+
+
+
+
+
+        <!-- 扭蛋機區 -->
+        <div class="Area02">
+            
+            
+            <!-- 驚喜扭蛋 -->
+            <div class="absolute ball_box_A">
+                <span class="wow ball_1 animated shake_1"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/ball_A07.png"></span>
+                <span class="wow ball_2 animated shake_2"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/ball_A06.png"></span>
+                <span class="wow ball_3 animated shake_3"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/ball_A05.png"></span>
+                <span class="wow ball_4 animated shake_4"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/ball_A04.png"></span>
+                <span class="wow ball_5 animated shake_5"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/ball_A03.png"></span>
+                <span class="wow ball_6 animated shake_6"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/ball_A02.png"></span>
+                <span class="wow ball_7 animated shake_7"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/ball_A01.png"></span>
+            </div>
+            <!-- 驚喜扭蛋 END -->
+            
+
+            <!-- 豪華扭蛋 -->
+            <div class="absolute ball_box_B">
+                <span class="wow ball_1 animated shake_8"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/ball_B08.png"></span>
+                <span class="wow ball_2 animated shake_9"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/ball_B07.png"></span>
+                <span class="wow ball_3 animated shake_10"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/ball_B06.png"></span>
+                <span class="wow ball_4 animated shake_11"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/ball_B05.png"></span>
+                <span class="wow ball_5 animated shake_12"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/ball_B04.png"></span>
+                <span class="wow ball_6 animated shake_13"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/ball_B03.png"></span>
+                <span class="wow ball_7 animated shake_14"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/ball_B02.png"></span>
+                <span class="wow ball_8 animated shake_15"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/ball_B01.png"></span>
+            </div>
+            <!-- 豪華扭蛋 END -->
+
+
+            <img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/Area02_bg.png" style="pointer-events: none; z-index:3;" />
+
+            <div class="title" style="top:350px; left:193px; position:absolute; z-index:5;">	
+                <img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/Area02_titleA.gif" />
+            </div>
+
+            <div class="title" style="top:350px; left:717px; position:absolute; z-index:5;">	
+                <img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/Area02_titleB.gif" />
+            </div>
+
+            <div class="try animated" style="top:756px; left:347px; z-index:5;">	
+                <img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/try.png" class="uptodown" />
+            </div>
+            
+            <div class="press" style="top:815px; position:absolute; z-index:4;">	
+                <img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/press.gif" usemap="#Map" border="0" />
+                <map name="Map" id="Map">
+                  <area shape="rect" coords="331,12,530,90" href="https://shopping.udn.com/mall/cus/event/ExchangeRaffleDraw.do?dc_xuid_0=12507LNEj32" />
+                  <area shape="rect" coords="855,10,1055,88" href="	https://shopping.udn.com/mall/cus/event/ExchangeRaffleDraw.do?dc_xuid_0=12512RAh5Lm" />
+                </map>
+            </div>
+
+
+        </div>
+        <!-- 扭蛋機區END -->
+
+
+
+        <!-- 獎項內容 -->
+        <div class="Area03">
+            <img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/Area03_bg.jpg" />
+
+        
+        </div>
+
+        <!-- 獎項內容END -->
+
+
+
+
+
+              
+    </div>
+
+    <!-- pc 主視覺_end -->
+    
+    
+    <!-- 手機 主視覺_strat -->
+    <div class="mob">				
+        <div id="Map01"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/mobile_02.jpg" usemap="#Map01" style="display:block;" border="0" hidefocus="true" />
+          <map name="Map01" id="Map1">
+            <area shape="rect" coords="105,456,285,521" id="login" style=" cursor: pointer;" />
+            <area shape="rect" coords="362,460,538,524" href="https://shopping.udn.com/mall/cus/meb/Cc1m01.do" target="_blank" />
+            <area shape="rect" coords="111,777,283,837" href="https://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=2999123128PwviOmO39Z" target="_blank" />
+            <area shape="rect" coords="362,773,532,841" href="#notice" />
+            <area shape="rect" coords="222,870,428,967" href="#notice" />
+          </map>
+        </div>	
+
+
+        <div id="Map02"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/mobile_03.jpg" usemap="#Map02" style="display:block;" border="0" hidefocus="true" />
+          <map name="Map02" id="Map2">
+            <area shape="rect" coords="46,762,602,1002" href="https://shopping.udn.com/mall/cus/event/ExchangeRaffleDraw.do?dc_xuid_0=12507LNEj32" />
+          </map>
+        </div>	
+        
+        <img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/mobile_04.jpg" usemap="#Map04" style="display:block;" border="0" hidefocus="true" />	
+        <map name="Map04" id="Map4">
+          <area shape="rect" coords="57,375,587,618" href="https://shopping.udn.com/mall/cus/event/ExchangeRaffleDraw.do?dc_xuid_0=12512RAh5Lm" />
+        </map>	
+
+
+        <div id="Map03"><img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/mobile_05.jpg" /></div>
+        <img src="https://img.udn.com/art/01_sp/20200706_GACHA/images/mobile_06.jpg" />
+
+            
+        
+    </div>	
+        
+    <!-- 手機 主視覺_end -->
+        
+
+
+
+
+        <!-- GO TOP
+          <div class="goTop" id="backtop"><span><i class="fas fa-angle-up"></i></span></div> -->
+    
+
+</div>
+<!-- vspc end --> 
+
+    
+        
+</div><!-- vspc_bg end --> 
+
+    
+<!-- PC區塊_側欄開始 -->
+<style>
+    .sbar * {
+        margin: 0;
+        padding: 0;
+        -webkit-text-size-adjust: none;
+        list-style: none;
+    }
+
+
+    .sbar {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        font-family: "Century Gothic", "Microsoft JhengHei", 'Microsoft JhengHei UI Regular', '微軟正黑體 Light', '微軟正黑體', sans-serif;
+        text-align: center;
+        position: fixed;
+        overflow: hidden;
+        z-index: 999;
+        width: 160px;
+        /* PC區塊側欄_寬，依圖寬填入 */
+        height: 250px;
+        /* PC區塊側欄_高,依圖高填入 */
+        top: 70px;
+        /* PC區塊側欄_離上方距離 */
+        right: 0;
+        /* PC區塊側欄_離右方距離 */
+        transition: all .3s;
+        /* top: 150px; */
+        /* 套HEADER時需要打開 */
+    }
+
+    .sbar>ul {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .sbar>ul>li {
+        display: block;
+        position: absolute;
+        color: #000;
+    }
+
+    /* 圖框 */
+    .sbar>ul>.img_box {
+        width: 160px;
+    }
+
+    .sbar>ul>.img_box a {
+        width: 100%;
+        display: block;
+    }
+
+    .sbar>ul>.img_box img {
+        display: block;
+    }
+
+    .sbar>ul>li.sleft {
+        width: 130px;
+        height: auto;
+        right: 0;
+    }
+
+    /* 左選單 */
+    .sbar>ul>li.sleft .sleft_menu {
+        width: 100%;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding-top: 5px;
+        padding-bottom: 20px;
+        border-radius: 0px 0px 80px 80px;
+    }
+
+    .sbar>ul>li.sleft .sleft_menu .sleft_item {
+        width: 120px;
+        height: 24px;
+        padding: 15px 5px 15px 5px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1px dashed #fff;
+    }
+
+    /* 數字顏色 */
+    .sbar>ul>li.sleft .sleft_menu .sleft_item span {
+        color: #ffff00;
+        font-size: 20px;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+
+    /* 字體顏色 */
+    .sbar>ul>li.sleft .sleft_menu .sleft_item a {
+        width: 100%;
+        height: 100%;
+        line-height: 27px;
+        text-align: center;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    /* 滑動換色 */
+    .sbar>ul>li.sleft .sleft_menu .sleft_item a:hover,
+    .sbar>ul>li.sleft .sleft_menu .sleft_item a:hover span {
+        color: #ffff00;
+    }
+
+    .sbar>ul>li.sleft .sleft_menu .sleft_footer {
+        width: 130px;
+        height: 27px;
+        padding: 5px;
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        padding-top: 15px;
+        position: relative;
+    }
+
+    .sbar>ul>li.sleft .sleft_menu .sleft_footer a {
+        width: 100%;
+        height: 100%;
+        line-height: 27px;
+        text-align: center;
+        color: #fff;
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: 3px;
+        text-decoration: none;
+    }
+
+    .sbar>ul>li.sleft .sleft_menu .sleft_footer:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-width: 0 5px 8px 5px;
+        border-style: solid;
+        position: absolute;
+        top: 10px;
+        left: 44%;
+        border-color: transparent transparent #fff transparent;
+    }
+
+    /* 右選單 */
+    .sbar>ul>li.sright {
+        width: 30px;
+        cursor: pointer;
+        padding-top: 20px;
+        color: #fff;
+        background-color: rgb(10, 1, 1);
+        line-height: 30px;
+        border-radius: 10px 0px 0px 10px;
+        position: absolute;
+        right: 130px;
+    }
+
+    .sbar>ul>li.sright>span {
+        display: block;
+    }
+
+    .sbarleft {
+        right: -130px;
+    }
+
+    .sbartop {
+        top: 70px;
+    }
+
+    @media screen and (max-width: 960px) {
+        .sbar {
+            display: none;
+        }
+    }
+</style>
+
+<script>
+    $(function () {
+
+        var WW = $(window).width();
+        if (WW < 1510) {
+            $(".sbar").addClass("sbarleft");
+        } else {
+            $(".sbar").removeClass("sbarleft");
+        }
+        $(".sright").click(function () {
+            $(".sbar").toggleClass('sbarleft');;
+        });
+
+        $(window).resize(function () {
+            var WW = $(window).width();
+            if (WW < 1510) {
+                $(".sbar").addClass("sbarleft");
+            } else {
+                $(".sbar").removeClass("sbarleft");
+            }
+        });
+
+        $(window).scroll(function () {
+            var HH = $(window).scrollTop();
+            if (HH > 80) {
+                $(".sbar").addClass("sbartop");
+            } else {
+                $(".sbar").removeClass("sbartop");
+            }
+
+            if (HH > 500) {
+                $(".topback-mob").stop().animate({
+                    opacity: '1'
+                }, 500);
+            } else {
+                $(".topback-mob").stop().animate({
+                    opacity: '0'
+                }, 500);
+            }
+        });
+
+        $("#backtop").click(function () {
+            // $(window).scrollTop(0);
+            $("html,body").animate({
+                scrollTop: 0
+            }, 800);
+        });
+
+        $(".topback-mob").click(function () {
+            $("html,body").animate({
+                scrollTop: 0
+            }, 800);
+        });
+
+        $("#q01-top").click(function () {
+            // $(window).scrollTop(0);
+            $("html,body").animate({
+                scrollTop: 450
+            }, 800);
+        });
+
+        $("#q02-top").click(function () {
+            // $(window).scrollTop(0);
+            $("html,body").animate({
+                scrollTop: 1255
+            }, 800);
+        });
+
+        $("#q03-top").click(function () {
+            // $(window).scrollTop(0);
+            $("html,body").animate({
+                scrollTop: 2600
+            }, 800);
+        });
+
+
+
+
+
+
+    });
+</script>
+
+
+<div class="sbar">
+    <ul>
+        <!-- 主會場圖示與連結 -->
+        <!-- <div class="img_box">
+        <a href="http://shopping.udn.com/mall/cus/event/eventPage.do?header=false&UrlRefXuid=202810151Cc9OjEo1hC" target="_blank"> -->
+        <!-- 寬160px 高150px -->
+        <!-- <img src="http://img.udn.com/art/20190119_mk_SP_01/images/img.png" alt="回活動主頁" title="回活動主頁">
+        </a>
+    </div> -->
+        <li class="sleft">
+            <!-- 子選單 -->
+            <ul class="sleft_menu">
+                <li class="sleft_item"><a href="javascript:void(0)" id="q01-top">遊戲規則</a></li>
+                <li class="sleft_item"><a href="javascript:void(0)" id="q02-top">玩扭蛋機</a></li>
+                <li class="sleft_item"><a href="javascript:void(0)" id="q03-top">活動獎品</a></li>
+
+                <!-- backtop -->
+                <div class="sleft_footer">
+                    <a href="javascript:void(0)" id="backtop">Top</a>
+                </div>
+            </ul>
+        </li>
+        <li class="sright">快速導覽<span>►</span></li>
+    </ul>
+</div>
+<!-- PC區塊_側欄結束 -->
+
+
+<!-- MOBILE區塊_下方選單開始 -->
+<style>
+    .bbar {
+        display: none;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        font-family: "Century Gothic", "Microsoft JhengHei", 'Microsoft JhengHei UI Regular', '微軟正黑體 Light', '微軟正黑體', sans-serif;
+        position: fixed;
+        z-index: 999;
+        -webkit-background-size: cover;
+        background-size: cover;
+        width: 100vw;
+        bottom: 0;
+    }
+
+    .bbar_menu {
+        width: 100%;
+        /* height: calc(90vw / 640 * 100); */
+        height: 50px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .bbar_menu>li {
+        width: calc(100vw/3);
+        /* MO2BILE區塊下方選單_數量,有幾個就除幾個(目前4) */
+        height: auto;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px dashed #ccc;
+        padding: 2px;
+        overflow: hidden;
+    }
+
+    .bbar_menu>li:last-child {
+        border-right: none;
+    }
+
+
+    .bbar_item>a {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        text-decoration: none;
+        width: 100%;
+        color: #e5e5e5;
+        display: inline-block;
+    }
+
+    .bbar_item>a p {
+        font-size: 16px;
+        font-weight: 600;
+        width: 100%;
+        display: block;
+        color: #fff;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .bbar_item span {
+        font-family: "Century Gothic", "Microsoft JhengHei", 'Microsoft JhengHei UI Regular', '微軟正黑體 Light', '微軟正黑體', sans-serif;
+        font-size: 18px;
+        color: #f5e508;
+        font-weight: 700;
+    }
+
+    /* 色彩背景,有幾個就新增幾個(目前4) */
+    .bbar_menu>li.bbar-bg01 {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .bbar_menu>li.bbar-bg02 {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .bbar_menu>li.bbar-bg03 {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+
+
+    /* topback-mob */
+    .topback-mob {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        color: #fff;
+        border-radius: 50%;
+        background-color: #565656;
+        top: -60px;
+        right: 1.5vw;
+        z-index: 999;
+        opacity: 0;
+    }
+
+    .topback-mob::before {
+        content: "▲";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+    }
+
+
+    @media screen and (max-width: 640px) {
+        .bbar {
+            display: block;
+        }
+    }
+</style>
+
+<div class="bbar">
+    <ul class="bbar_menu">
+        <!-- MOBILE區塊下方選單_數量,有幾個就開幾排<a>(目前4) -->
+        <li class="bbar_item bbar-bg01">
+            <a href="#Map01">
+                <p>遊戲規則</p>
+                <!-- <p>美食團購<br>
+                <span>美食團購</span>
+            </p> -->
+            </a>
+        </li>
+        <li class="bbar_item bbar-bg02">
+            <a href="#Map02">
+                <p>玩扭蛋機</p>
+                <!-- <p>美食團購<br>
+                <span>美食團購</span>
+            </p> -->
+            </a>
+        </li>
+        <li class="bbar_item bbar-bg03">
+            <a href="#Map03">
+                <p>活動獎品</p>
+                <!-- <p>美食團購<br>
+                <span>美食團購</span>
+            </p> -->
+            </a>
+        </li>	
+    </ul>
+    <!-- topback-mob -->
+    <div class="topback-mob"></div>
+</div>
+<!-- MOBILE區塊_下方選單結束 -->
+
+
+<!-- PC區塊_主視覺結束 -->
+
+
+
+

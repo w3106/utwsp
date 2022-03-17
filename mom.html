@@ -1,0 +1,279 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.5; user-scalable=1;" />
+    <meta property="og:image" content="https://img.udn.com/art/08_fs/20200427_SP01/images/FB_1200x628.jpg?v005" />
+    <title>udnshopping 買東西</title>
+</head>
+<style type="text/css">
+    :focus {
+        outline: 0;
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        min-width: 0;
+        /* 必寫!!!*/
+
+    }
+
+
+  /* 提高層級 解決動畫覆蓋 無法點擊問題 */
+  .rwd02_top_banner,.rwd02_flex_item,.rwd02_bottom_banner_block {
+    position: relative;
+    z-index: 10;
+  } 
+
+  /*model*/
+  .main .model {
+    width: calc(681 / 960 * 100%);
+    height: 0;
+    padding-top: calc(1056 / 960 * 100%);
+    background-image: url(https://img.udn.com/art/08_fs/20200427_SP01/images/model.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    top: 7%;
+    left: 67%;
+    z-index: 5;
+	pointer-events: none;
+  }
+
+
+
+
+
+
+
+
+/* =====================================================================================
+........................................mobile版.......................................
+=======================================================================================*/
+
+    .main-bg {
+        margin: 0;
+        padding: 0;
+        min-width: 0;
+        /* 必寫!!!*/
+        max-width: 1920px;
+        position: relative;
+        margin: 0 auto;
+        height: auto;
+        overflow: hidden;
+        background-image: none;
+        /* 滿版主視覺背景 */
+        background-repeat: no-repeat;
+        background-position: center top;
+        /* background-position: center 182px; */
+        /* background-attachment: fixed; */
+        /* 套HEADER時需要打開 */
+		background-color:#ffbed2;
+    }
+
+    .main {
+        display: block;
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    /* 視覺左上角活動LOGO_樣式
+    ---------------------------*/
+
+    .udnLOGO {
+        display: block;
+        z-index: 700;
+        position: absolute;
+        width: calc(139/640*100%);
+        /* 更改數值 調整logo大小 */
+        left: 2%;
+        top: 0.3%;
+    }
+
+    .udnLOGO span {
+        display: block;
+        width: 100%;
+        height: 0;
+        background-size: 100% auto;
+        padding-bottom: calc(293/797*100%);
+        /* 更改數值 調整logo整體高度*/
+        /* padding-bottom: calc(360/797*100%); */
+        /* 用第4/5 底色_logo 打開開素質 */
+        background-image: url(https://img.udn.com/art/2019_logo/images/new_udnlogo_02.svg);
+    }
+
+    .main img {
+        width: 100%;
+        display: block;
+    }
+
+    .main .main_items {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main .main_items_50 {
+        display: flex;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+
+
+
+    /* =====================================================================================
+........................................desktop版.......................................
+=======================================================================================*/
+
+    @media screen and (min-width: 641px) {
+
+        .main-bg {
+            /* background-color: red; */
+            background-image: url(https://img.udn.com/art/08_fs/20200427_SP01/images/index_bg.jpg);
+            /* 滿版主視覺背景 */
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+
+        /* 視覺左上角活動LOGO_樣式
+        ---------------------------*/
+
+        .udnLOGO {
+            width: calc(139/960*100%);
+            /* 更改數值 調整logo大小 */
+            left: calc(20/960*100%);
+            top: calc(3/960*100%);
+        }
+    }
+</style>
+
+
+<!-- <script src="https://img.udn.com/art/js_temp/jquery.2.2.4.min.js?v005"></script> -->
+<!-- 套上"有天地的後台時",請關掉這隻程式 -->
+
+<!-- imageMap RWD開始 -->
+<script src="https://img.udn.com/art/js_temp/jquery.rwdImageMaps.min.js?v005"></script>
+<script>
+    $(function () {
+        $("img[usemap]").rwdImageMaps();
+    });
+</script>
+<!-- imageMap RWD結束 -->
+
+<!-- 星星特效 js&css -->
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script> -->
+<script  src="https://img.udn.com/art/08_fs/20200427_SP01/js/index.js"></script>
+<link rel="stylesheet" href="https://img.udn.com/art/08_fs/20200427_SP01/css/style.css">
+<!-- 星星特效 js&css -->
+
+<!-- 版頭燈 css -->
+<link rel="stylesheet" href="https://img.udn.com/art/08_fs/20200427_SP01/css/layout.css">
+<!-- 版頭燈 css -->
+
+<body>
+
+    <!----全部外框start---->
+    <div class="main-bg">
+
+
+		<!-- 版頭燈 -->
+        <div class="absolute sp spotlight_L1"><img src="https://img.udn.com/art/08_fs/20200427_SP01/images/spotlight.png" class="d-block sp_R2"></div>
+        <div class="absolute sp spotlight_R2"><img src="https://img.udn.com/art/08_fs/20200427_SP01/images/spotlight.png" class="d-block sp_R2"></div>
+		<!-- 版頭燈 -->
+
+        <!----內容---->
+        <div class="main">
+            <ul>
+
+                <!-- LOGO -->
+                <a href="https://shopping.udn.com/mall/Cc1a00.do" target="_blank" class="udnLOGO">
+                    <span></span>
+                </a>
+                <!-- LOGO -->
+
+
+                <li class="main_items">
+                <!-- 版頭人物 -->
+                <a class="model"></a>
+                <!-- 版頭人物 -->
+                    <img src="https://img.udn.com/art/08_fs/20200427_SP01/images/index_02.jpg" usemap="#Map" style="display:block;" border="0" hidefocus="true">
+                    <map name="Map" id="Map">
+                      <area shape="poly" coords="178,374,381,401,398,419,361,562,221,562,192,542,167,397" href="https://shopping.udn.com/mall/cus/event/eventPage.do?header=false&amp;UrlRefXuid=221905143Z55qDiEcrT" target="_blank" />
+                      <area shape="poly" coords="419,418,734,387,753,403,718,553,678,574,392,574,368,555,399,426" href="https://shopping.udn.com/mall/cus/event/eventPage.do?header=true&amp;UrlRefXuid=232004121wfncQolJmr" target="_blank" />
+                    </map>
+              </li>
+
+                <li class="main_items">
+                    <img src="https://img.udn.com/art/08_fs/20200427_SP01/images/index_03.jpg" usemap="#Map2" style="display:block;" border="0" hidefocus="true">
+                    <map name="Map2" id="Map2">
+                      <area shape="rect" coords="4,18,243,133" href="https://shopping.udn.com/mall/cus/event/eventPage.do?header=true&amp;UrlRefXuid=288808082rdbe7RicAb" target="_blank" />
+                      <area shape="rect" coords="255,20,496,133" href="https://shopping.udn.com/mall/cus/event/eventPage.do?header=true&amp;UrlRefXuid=203004132klcB7F1unQ" target="_blank" />
+                      <area shape="rect" coords="504,21,749,131" href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=A_002_001_125_001" />
+                      <area shape="rect" coords="21,147,273,258" href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=C_007_002_097_024" />
+                      <area shape="rect" coords="284,147,534,258" href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=C_006_002_094_001" />
+                      <area shape="rect" coords="548,144,799,256" href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=Y_004_009_027_006" />
+                    </map>
+                </li>
+
+                <!-- 商品區塊 -->
+                <li class="main_items">
+                    <a href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=A_002_001_006">
+                        <img src="https://img.udn.com/art/08_fs/20200427_SP01/images/index_04.jpg" style="display:block;" border="0" hidefocus="true">
+                    </a>
+                </li>
+
+                <li class="main_items">
+                    <a href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=C_003_012_009">
+                        <img src="https://img.udn.com/art/08_fs/20200427_SP01/images/index_05.jpg" style="display:block;" border="0" hidefocus="true">
+                    </a>
+                </li>
+
+                <li class="main_items">
+                    <a href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=C_003_021_013_002">
+                        <img src="https://img.udn.com/art/08_fs/20200427_SP01/images/index_06.jpg" style="display:block;" border="0" hidefocus="true">
+                    </a>
+                </li>
+
+                <li class="main_items">
+                    <a href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=C_013_001_039_007">
+                        <img src="https://img.udn.com/art/08_fs/20200427_SP01/images/index_07.jpg" style="display:block;" border="0" hidefocus="true">
+                    </a>
+                </li>
+
+                <li class="main_items">
+                    <a href="https://shopping.udn.com/mall/cus/cat/Cc1c01.do?dc_cateid_0=C_009_024_259">
+                        <img src="https://img.udn.com/art/08_fs/20200427_SP01/images/index_08.jpg" style="display:block;" border="0" hidefocus="true">
+                    </a>
+                </li>
+                <!-- 商品區塊 -->
+
+            </ul>
+        </div>
+        <!----內容---->
+        
+		<!-- 星星特效 -->
+        <div id="starshine">
+            <div class="template shine"></div>
+        </div>
+		<!-- 星星特效 -->
+
+    </div>
+    <!----全部外框end---->
+
+</body>
+
+</html>

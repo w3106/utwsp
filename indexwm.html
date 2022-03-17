@@ -1,0 +1,630 @@
+<!-- PC區塊_主視覺開始 -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta property="og:image" content="http://img.udn.com/art/20190201_mk_SP_02/images/1200x628.jpg">
+	<meta charset="UTF-8" />
+	<script src='https://code.jquery.com/jquery-1.11.2.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-text-size-adjust: none;
+			list-style: none;
+			outline: none; 
+		}
+		img { border: 0;}
+		html, body {
+			min-width: 0;/* 必寫!!!*/
+			height: auto;
+			background-image: url(http://img.udn.com/art/20190301_mk_SP_08/images/BG.jpg);/* 滿版主視覺背景 */
+			background-repeat: no-repeat;
+			background-position: center top;
+			/* background-position: center 182px; */
+			/* 套HEADER時需要打開 */
+		}
+
+		.vspc {
+			width: 1190px;
+			height: auto;
+			margin: 0 auto;
+			position: relative;
+			}
+		.vspc img { display: block;}
+
+
+		.udnLOGO {
+			display: block;
+			z-index: 700;
+			position: absolute;
+			width: calc(139/1190*100%);
+			/* 更改數值 調整logo大小 */
+			left: calc(40/1190*100%);
+			top: calc(10/1190*100%);
+		}
+
+		.udnLOGO span {
+			display: block;
+			width: 100%;
+			height: 0;
+			background-size: 100% auto;
+			padding-bottom: calc(293/797*100%);
+			/* 更改數值 調整logo整體高度*/
+
+			/* padding-bottom: calc(360/797*100%); */
+			/* 用第4/5 底色_logo 打開開素質 */
+
+			/* 更換需要的logo路徑 2018舊版 or 2019-新版  */
+			background-image: url(http://img.udn.com/art/2019_logo/images/new_udnlogo_01.svg);
+		}
+
+
+        .vspc .bigbang-LINE {
+		display: block;
+		position: absolute;
+		top: 15px;
+		right: 100px;
+		z-index: 700;
+	}
+
+		.vspc .bigbang-LINE img {
+		width: 80%;
+	}
+
+        .vspc .bigbang-FB {
+		display: block;
+		position: absolute;
+		top: 15px;
+		right: 50px;
+		z-index: 700;
+	}
+
+		.vspc .bigbang-FB img {
+		width: 80%;
+	}
+
+		.vspc .member01{
+			position: absolute;
+			top:760px;
+			left:90px;
+			z-index: 100;	
+		}
+
+		
+		.vspc .PUSH01{
+			position: absolute;
+			top:380px;
+			right:720px;	
+			z-index: 100;	
+			animation:PUSH01 2s infinite;
+		}	
+
+
+	
+	.vspc .PUSH02{
+			position: absolute;
+			top:160px;
+			right:28px;	
+			z-index: 100;	
+			animation:PUSH02 2s infinite;
+		}	
+
+
+
+	
+
+		.vspc .main .info{
+			display: block;				
+			position: absolute;
+			top:280px;
+			left:55px;
+			animation:swing 4s 1s infinite ;
+			
+		}
+
+		@keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+
+
+
+
+
+
+		.vspc .main .infoo{
+			display: block;				
+			position: absolute;
+			top:150px;
+			left:880px;
+			animation:swing 4s 2s infinite ;
+			
+		}
+
+		@keyframes swing {
+  10% {
+    -webkit-transform: rotate3d(-4, -2, 0, 2deg);
+    transform: rotate3d(-4, -2, 0, 2deg);
+  }
+
+30% {
+    -webkit-transform: rotate3d(0, 0, 5, -5deg);
+    transform: rotate3d(0, 0, 5, -5deg);
+  }
+
+  50% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  70% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+
+
+
+
+		@keyframes PUSH01{
+			0%{transform: translateY(10px);}
+			50%{transform: translateY(0px);}
+			100%{transform: translateY(10px);}
+		}
+
+
+		@keyframes PUSH02{
+			0%{transform: translateY(7px);}
+			50%{transform: translateY(0px);}
+			100%{transform: translateY(7px);}
+		}
+
+
+
+		@media screen and (max-width: 640px) {
+			.vspc { display: none;}
+
+      		  }
+
+
+	</style>
+
+	<script src="./index-2_files/eplogo.js.下載"></script>
+
+
+	</head><body><div class="vspc">
+		<div class="main">
+
+
+				<!-- LOGO -->
+				<a href="https://shopping.udn.com/mall/Cc1a00.do" target="_blank" class="udnLOGO">
+					<span></span>
+				</a>
+				<!-- LOGO -->
+	
+
+		<img src="http://img.udn.com/art/20190301_mk_SP_08/images/index_02.jpg" style="display:block;" border="0" hidefocus="true">
+
+
+
+		<img src="http://img.udn.com/art/20190301_mk_SP_08/images/index_05.jpg" usemap="#Map" style="display:block;" border="0" hidefocus="true">
+        <map name="Map">
+			<area shape="rect" coords="31,26,564,522" href="https://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=201912313nFDL5Ulsee">
+			<area shape="rect" coords="635,28,1129,178" href="https://shopping.udn.com/mall/cus/event/eventPage.do?header=false&UrlRefXuid=2999123135ywIiSuQZD7">
+			<area shape="rect" coords="639,187,1132,495" href="https://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=202902114yg0oyHFMB2">
+        </map>
+	
+
+		<div class="PUSH02"><a href="https://shopping.udn.com/mall/cus/meb/Cc1m01.do">
+			<img src="http://img.udn.com/art/20190301_mk_SP_08/images/m1.png"></a>
+		</div>
+	</div>
+</div>
+
+<!-- PC區塊_主視覺結束 -->
+
+
+<!-- MOBILE區塊_主視覺開始 -->
+
+	<style>
+		.vsmobile {
+			max-width: 640px;
+			margin: 0 auto;
+			display: none;
+		}
+		
+		.vsmobile img {
+			max-width: 100%;
+			height: auto;
+			display: block;}
+		@media screen and (max-width: 640px) {
+			.vsmobile { display: block;}
+		}
+
+
+
+	.vsmobile .udnLOGO {
+					z-index: 700;
+					position: absolute;
+					width: calc(170/640*100%);
+					/* 更改數值 調整logo大小 */
+					left: calc(15/640*100%);
+					top: calc(1/640*100%);
+				}
+
+			.vsmobile .udnLOGO span {
+
+					padding-bottom: calc(295/797*100%);
+					/* 更改數值 調整logo整體高度*/
+
+					/* padding-bottom: calc(362/797*100%); */
+					/* 用第4/5 底色_logo 打開開素質 */
+					
+					/* 更換需要的logo路徑 2018舊版 or 2019-新版  */
+					background-image: url(http://img.udn.com/art/2019_logo/images/new_udnlogo_01.svg);
+				}
+				
+
+
+
+
+		.Footer01 {
+		display: block;
+		position: relative;
+		max-width: 640px;
+		margin: 0 ;
+		}
+
+
+
+		.indexxx01 {
+		display: block;
+		position: relative;
+		max-width: 640px;
+		margin: 0 ;
+		}
+
+		.vsmobile  .fooooott01{
+			display: block;
+			position: absolute;
+			top: 0px;
+			margin: 0 auto ;
+		}
+
+        .vsmobile  .bigbang-LINE {
+			display: block;
+			position: relative;
+			float:right;
+			width: 50%;
+			top: 3%;
+			z-index: 100;	
+	}
+
+
+
+        .vsmobile  .bigbang-FB {
+			display: block;
+			position: relative;
+			float:left;
+			width: 50%;
+			top: 3%;
+			z-index: 100;	
+	}
+
+
+
+
+
+
+		.vsmobile .main .info{
+			display: block;				
+			position: absolute;
+			width: 33.5%;
+			bottom: 73.5%;
+			left: -2%;
+			z-index: 98;
+			animation:swing 5s 1s infinite ;
+			
+		}
+
+		@keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+		.vsmobile .main .infoo{
+			display: block;				
+			position: absolute;
+			width: 31.2%;
+			bottom: 71.3%;
+			left: 59.3%;
+			z-index: 100;
+			animation:swing 4s 2s infinite ;
+			
+		}
+
+		@keyframes swing {
+  10% {
+    -webkit-transform: rotate3d(0, 0, 1, 4deg);
+    transform: rotate3d(0, 0, 1, 4deg);
+  }
+
+  30% {
+    -webkit-transform: rotate3d(0, 0, 1, -4deg);
+    transform: rotate3d(0, 0, 1, -4deg);
+  }
+
+  50% {
+    -webkit-transform: rotate3d(0, 0, 1, 4deg);
+    transform: rotate3d(0, 0, 1, 4deg);
+  }
+
+  70% {
+    -webkit-transform: rotate3d(0, 0, 1, -4deg);
+    transform: rotate3d(0, 0, 1, -4deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+
+
+
+
+
+
+
+		.vsmobile  .PUSH01{
+			display: block;
+			position: absolute;
+			width: 30%;
+			bottom: 72%;
+			left: 33%;
+			z-index: 100;		
+			animation:PUSH01 1s infinite;
+		}
+
+		@keyframes PUSH01{
+			0%{transform: translateY(-2%);}
+			50%{transform: translateY(0px);}
+			100%{transform: translateY(-2%);}
+		}
+
+
+	</style>
+
+	<!-- <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script> -->
+
+	<div class="vsmobile">
+		<div class="main">
+
+
+
+	<!-- LOGO -->
+	<a href="https://shopping.udn.com/mall/Cc1a00.do" target="_blank" class="udnLOGO">
+		<span></span>
+	</a>
+	<!-- LOGO -->
+
+
+
+		<div class="indexxx01">
+		<img src="http://img.udn.com/art/20190301_mk_SP_08/images/640_01.jpg" usemap="#Map4" style="display:block;" border="0" hidefocus="true">
+        <map name="Map4">
+          <area shape="rect" coords="265,425,434,535" href="https://shopping.udn.com/mall/cus/meb/Cc1m01.do
+">
+        </map>
+
+
+
+		<img src="http://img.udn.com/art/20190301_mk_SP_08/images/640_02.jpg" usemap="#Map2" style="display:block;" border="0" hidefocus="true">
+        <map name="Map2">
+          <area shape="rect" coords="28,39,613,579" href="https://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=201912313nFDL5Ulsee">
+        </map>
+		<img src="http://img.udn.com/art/20190301_mk_SP_08/images/640_03.jpg" usemap="#Map3" style="display:block;" border="0" hidefocus="true">
+        <map name="Map3">
+          <area shape="rect" coords="44,127,595,270" href="https://shopping.udn.com/mall/cus/event/eventPage.do?header=false&UrlRefXuid=2999123135ywIiSuQZD7">
+          <area shape="rect" coords="56,279,610,591" href="https://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=202902114yg0oyHFMB2">
+        </map>
+		
+	
+	    	</div>
+		</div>
+		
+	</div>
+
+<!-- MOBILE區塊_主視覺結束 -->
+
+
+
+<!-- PC區塊_側欄開始 -->
+<style>
+
+	.sbar *{
+		margin: 0;
+		padding: 0;
+		-webkit-text-size-adjust: none;
+		list-style: none;
+	}
+
+
+	.sbar {
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		font-family: "Century Gothic", "Microsoft JhengHei", 'Microsoft JhengHei UI Regular', '微軟正黑體 Light', '微軟正黑體', sans-serif;
+		text-align: center;
+		position: fixed;
+		z-index: 999;
+		overflow: hidden;
+		width: 160px;
+		/* PC區塊側欄_寬，依圖寬填入 */
+		height: 500px;
+		/* PC區塊側欄_高,依圖高填入 */
+		top: 70px;
+		/* PC區塊側欄_離上方距離 */
+		left: 0px;
+		/* PC區塊側欄_離右方距離 */
+		transition: all .3s;
+		/* top: 150px; */
+		/* 套HEADER時需要打開 */
+	}
+
+	.sbar>ul {
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
+	.sbar>ul>li {
+		display: block;
+		position: absolute;
+	}
+
+	.sbar>ul>li:nth-child(2) {
+		display: block;
+		position: absolute;
+		margin-left: 130px;
+	}
+
+	.sbar>ul>li.sleft {
+		width: 100%;
+		height: 100%;
+		/* background: red; */
+	}
+
+	/* .sbar>ul>li.sright {
+		width: 30px;
+		height: 100%;
+		cursor: pointer;
+		background: url(http://img.udn.com/art/20190225_mk_SP_01/images/0225/pc_left_bar.png) right top no-repeat;
+		/* background: rgb(68, 8, 231); */
+	} */
+
+	.sbarleft {
+		left: -130px;
+	}
+
+	.sbartop {
+		top: 70px;
+	}
+
+	@media screen and (max-width: 640px) {
+		.sbar {
+			display: none;
+		}
+	}
+</style>
+<!-- <script>
+	$(function () {
+		var WW = $(window).width();
+		if (WW < 1510) {
+			$(".sbar").addClass("sbarleft");
+		} else {
+			$(".sbar").removeClass("sbarleft");
+		}
+		$(".sright").click(function () {
+			$(".sbar").toggleClass('sbarleft');;
+		});
+		$(window).resize(function () {
+			var WW = $(window).width();
+			if (WW < 1510) {
+				$(".sbar").addClass("sbarleft");
+			} else {
+				$(".sbar").removeClass("sbarleft");
+			}
+		});
+		$(window).scroll(function () {
+			var HH = $(window).scrollTop();
+			if (HH > 80) {
+				$(".sbar").addClass("sbartop");
+			} else {
+				$(".sbar").removeClass("sbartop");
+			}
+		});
+		$("#backtop").click(function () {
+			// $(window).scrollTop(0);
+			$("html,body").animate({
+				scrollTop: 0
+			}, 800);
+		});
+	});
+</script> -->
+<!-- <div class="sbar">
+	<ul>
+		<li class="sleft"><img src="http://img.udn.com/art/20190225_mk_SP_01/images/0225/pc_left_bar.png" alt="" usemap="#Map111">
+			<map name="Map111">
+				<area shape="rect" coords="3,139,123,174" href="http://shopping.udn.com/mall/cus/event/eventPage.do?header=false&UrlRefXuid=299809011wiSCeNvMeh" target="_blank">
+				  <area shape="rect" coords="3,178,126,215" href="http://shopping.udn.com/mall/cus/event/eventPage.do?header=false&UrlRefXuid=202902221v7of52wFWI" target="_blank">
+				  <area shape="rect" coords="3,222,124,252" href="http://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=2219022818X3fhtXZTB" target="_blank">
+				  <area shape="rect" coords="3,258,126,296" href="http://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=202902251ycxjnVyrzb" target="_blank">
+				  <area shape="rect" coords="3,300,126,332" href="http://shopping.udn.com/mall/cus/event/eventPage.do?header=false&UrlRefXuid=209907225feUe8RE5Sz" target="_blank">
+				  <area shape="rect" coords="4,338,125,375" href="http://shopping.udn.com/mall/cus/event/eventPage.do?header=false&UrlRefXuid=201802012nLAxoOUwjB" target="_blank">
+				  <area shape="rect" coords="5,417,123,452" href="javascript:void(0)" id="backtop">
+				<area shape="rect" coords="5,379,125,414" href="http://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=288808082rdbe7RicAb" target="_blank">
+				<area shape="circle" coords="63,64,62" href="http://shopping.udn.com/mall/cus/event/eventPage.do?header=false&UrlRefXuid=299809011wiSCeNvMeh">
+			  </map>
+		</li>
+		<li class="sright"></li>
+	</ul>
+</div> -->
+<!-- PC區塊_側欄結束 -->
